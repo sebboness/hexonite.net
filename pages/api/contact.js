@@ -41,7 +41,7 @@ export default async function handler(req, res) {
         if (!hcaptcha.success)
             throw (hcaptcha.errors || ["Unsuccessful HCaptcha challenge"]).join("; ")
     } catch (err) {
-        resp400InvalidInput(res, [err, HCAPTCHA_SECRET], "Failed to validate you're not a robot =[");
+        resp400InvalidInput(res, [err, `${HCAPTCHA_SECRET} ${APP_AWS_REGION} ${SMTP_AWS_KEY}`], "Failed to validate you're not a robot =[");
         return
     }
 
