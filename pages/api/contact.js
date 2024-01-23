@@ -38,8 +38,6 @@ export default async function handler(req, res) {
     const hcaptcha_token = req.body["h-captcha-response"];
     try {
         const hcaptcha = await verifyHCaptcha(hcaptcha_token)
-        console.log("hcaptcha", hcaptcha);
-
         if (!hcaptcha.success)
             throw (hcaptcha.errors || ["Unsuccessful HCaptcha challenge"]).join("; ")
     } catch (err) {
@@ -66,7 +64,6 @@ export default async function handler(req, res) {
     }
 
     try {
-        console.log("message", message.message);
         const info = await transporter.sendMail({
             from: '"Hexonite" <hello@hexonite.net>',
             to: '"Sebastian Stefaniuk" <sebboness@gmail.com>',
