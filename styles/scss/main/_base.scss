@@ -1694,9 +1694,10 @@ body.modal {
 /* ---------------- */
 /* Flash messages
 /* ---------------- */
-.flash div { padding: 20px; margin-bottom: 20px }
-.flash h3 { color: #333 !important; font-size: 35px; margin-bottom: 0.5em; }
-.flash p { list-style: none; margin: 0; }
+.flash div { color: #333 !important; padding: 20px; margin-bottom: 20px }
+.flash h4 { color: #333 !important; margin-bottom: 0.5em; }
+.flash p, ul { margin: 0; }
+.flash ul { margin-left: 24px; }
 .flash .close { float: right; }
 
     /* Confirmations */
@@ -1704,8 +1705,8 @@ body.modal {
     .flash .confirm h2 { color: #516f26; }
     
     /* Errors */
-    .flash .error { background: #ffc; border: 8px solid #ea3c20; }
-    .flash .error h2 { color: #f00;  }
+    .flash .failure { background: #ffc; border: 8px solid #ea3c20; }
+    .flash .failure h2 { color: #f00;  }
     
     /* Notices */
     .flash .notice { background: #e0f0ff; border: 8px solid #a1d0fb; border-radius: 32px; padding: 1.5em; }

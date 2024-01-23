@@ -13,6 +13,7 @@ const Contact = () => {
   const [token, setToken] = useState(null);
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
+  const [errors, setErrors] = useState([]);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -23,7 +24,7 @@ const Contact = () => {
     // this reaches out to the hCaptcha JS API and runs the execute function on
     // it. you can use other functions as documented here:
     // https://docs.hcaptcha.com/configuration#jsapi
-    // captchaRef.current.execute();
+    captchaRef.current.execute();
   };
 
   const showErrorMessage = (error) => toast.error(error, {
@@ -52,6 +53,7 @@ const Contact = () => {
     if (submitting)
       return;
 
+    setErrors([]);
     setSubmitting(true);
 
     const formData = new FormData(form.current);
@@ -67,20 +69,22 @@ const Contact = () => {
       .then(
           // fetch done
           (response) => response.json(),
-          (error) => console.warn(error.message || (error + ""))
+          (error) => setErrors([error.message || (error + "")])
       )
       .then(
           // response json() done
           (data) => {
             if (data.status == "SUCCESS") {
               setSent(true);
+            } else if (data.errors) {
+              setErrors(data.errors);
             } else {
-              // show error
+              setErrors([data.message || "Failed to validate human verification"])
             }
           },
-          (error) => console.warn(error + "")
+          (error) => setErrors([error + ""])
       )
-      .catch((error) => console.warn(error + ""))
+      .catch((error) => setErrors([error + ""]))
       .finally(() => {
         captchaRef.current.resetCaptcha();
         setToken(null);
@@ -188,6 +192,13 @@ const Contact = () => {
       </div>
       {/* END FIELDS */}
       {/* END COTACT */}
+
+      {errors && errors.length > 0
+        ? <>
+          <div className="clear"><br /></div>
+          <FlashMessage type="failure" title="Failed to send message :(" errors={errors} />
+        </>
+        : <></>}
     </>
   );
 };
