@@ -1,5 +1,7 @@
 const { HCAPTCHA_SECRET } = process.env;
 
+console.log("XXX (1): ", HCAPTCHA_SECRET);
+
 const HCAPTCHA_ERRORS = {
     'missing-input-secret': 'HCaptcha secret key is missing',
     'invalid-input-secret': 'HCaptcha secret key is invalid or malformed',
@@ -30,6 +32,8 @@ export const verifyHCaptcha = async (hcaptcha_token) => {
     return new Promise((resolve, reject) => {
         const secret = encodeURIComponent(HCAPTCHA_SECRET);
         const token = encodeURIComponent(hcaptcha_token);
+
+        console.log("XXX (2): ", HCAPTCHA_SECRET);
 
         fetch('https://api.hcaptcha.com/siteverify', {
             method: 'POST',
