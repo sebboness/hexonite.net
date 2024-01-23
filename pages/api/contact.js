@@ -5,12 +5,12 @@ import validator from 'validator';
 import { verifyHCaptcha } from "./_hcaptcha";
 const AWS = require("@aws-sdk/client-ses");
 
-const { AWS_REGION, SMTP_AWS_KEY, SMTP_AWS_SECRET } = process.env;
+const { APP_AWS_REGION, SMTP_AWS_KEY, SMTP_AWS_SECRET } = process.env;
 
 // Create SES service object.
 const ses = new AWS.SES({
     apiVersion: "2010-12-01",
-    region: AWS_REGION,
+    region: APP_AWS_REGION,
     credentials: {
         accessKeyId: SMTP_AWS_KEY,
         secretAccessKey: SMTP_AWS_SECRET,
