@@ -29,7 +29,7 @@ export default function Document() {
         <NextScript />
 
         <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-        <script src="https://kit.fontawesome.com/67e614e582.js" crossOrigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/67e614e582.js" crossOrigin="anonymous" async defer></script>
       </body>
     </Html>
   );

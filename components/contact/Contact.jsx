@@ -97,7 +97,7 @@ const Contact = () => {
         <FlashMessage type="confirm" title="Message sent successfully!" />
         <div className="page_text">
           <p>Thank you for sending me a message! Rest assured that I will do my best to answer it as promptly as possible.</p>
-          <p>In the meantime, don't hesitate to view my <a href="https://www.linkedin.com/in/sebboness/">LinkedIn profile</a>.</p>
+          <p>In the meantime, don&apos;t hesitate to view my <a href="https://www.linkedin.com/in/sebboness/">LinkedIn profile</a>.</p>
         </div>
       </>
     )

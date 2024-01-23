@@ -85,7 +85,7 @@ const Resume = () => {
                           ? <Image width={24} height={24} src={value.websiteIcon} alt={value.institute} />
                           : <></>}
                         {value.website
-                          ? <a href={value.website} target="_blank">{value.institute}</a>
+                          ? <a href={value.website} target="_blank" rel="noreferrer">{value.institute}</a>
                           : value.institute}
                       </h4>
                       <span>{value.degree}</span>

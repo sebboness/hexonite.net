@@ -12,7 +12,7 @@ const index = () => {
             <div className="title_flex">
               <div className="left">
                 <span>Services</span>
-                <h3>Let's work together</h3>
+                <h3>Let&apos;s work together</h3>
               </div>
             </div>
           </div>

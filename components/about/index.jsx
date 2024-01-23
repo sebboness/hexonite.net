@@ -92,7 +92,7 @@ const AboutMain = () => {
               </p>
               <p>
                 Then, starting in fitfh grade, English was added to my repertoire of spoken languages. Living in the
-                United States as an adult, I've developed a deep appreciation for the art of multilingual communication,
+                United States as an adult, I&apos;ve developed a deep appreciation for the art of multilingual communication,
                 and my gratitude for speaking multiple languages has flourished.
               </p>
               <p>
@@ -128,8 +128,8 @@ const AboutMain = () => {
               <p>
                 This is a rather new hobby of mine, and it has brought out a new creative side of me. In my late teens and
                 early 20s I really liked 3D modeling, and one of the things I always wanted was to hold a piece of my designs
-                in my hands. With the advent of 3D printing at home, this has finally become a reality. I'm spending a
-                lot of time 3D modeling and printing, and it's fun!
+                in my hands. With the advent of 3D printing at home, this has finally become a reality. I&apos;m spending a
+                lot of time 3D modeling and printing, and it&apos;s fun!
               </p>
             </div>
           </div>
@@ -152,7 +152,7 @@ const AboutMain = () => {
               <p>
                 Meditation is not for everyone. However, you may practice other activities, but with a mindful attitude.
                 For example: I love cooking. Experimenting with new flavors or cooking my favorite dishes is such a 
-                satisfying activity. When I cook, I'm being mindful and use all of my attention for just that.
+                satisfying activity. When I cook, I&apos;m being mindful and use all of my attention for just that.
               </p>
             </div>
           </div>
