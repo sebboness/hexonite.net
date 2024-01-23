@@ -5,7 +5,7 @@ import validator from 'validator';
 import { verifyHCaptcha } from "./_hcaptcha";
 const AWS = require("@aws-sdk/client-ses");
 
-const { APP_AWS_REGION, SMTP_AWS_KEY, SMTP_AWS_SECRET } = process.env;
+const { APP_AWS_REGION, SMTP_AWS_KEY, SMTP_AWS_SECRET, HCAPTCHA_SECRET } = process.env;
 
 // Create SES service object.
 const ses = new AWS.SES({
@@ -41,7 +41,7 @@ export default async function handler(req, res) {
         if (!hcaptcha.success)
             throw (hcaptcha.errors || ["Unsuccessful HCaptcha challenge"]).join("; ")
     } catch (err) {
-        resp400InvalidInput(res, [err], "Failed to validate you're not a robot =[");
+        resp400InvalidInput(res, [err, HCAPTCHA_SECRET], "Failed to validate you're not a robot =[");
         return
     }
 
