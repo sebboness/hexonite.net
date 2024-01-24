@@ -5,6 +5,11 @@ const defaultResp = (res, statusCode, status, errors, message, data) => res.stat
     data,
 });
 
+const envSecrets = JSON.parse(process.env.secrets || "{}");
+export const grabEnvSecret = (key) => {
+    return envSecrets[key] || process.env[key];
+}
+
 // 2xx
 export const resp200OK = (res, message = "OK") => defaultResp(res, 200, "SUCCESS", [], message, null);
 export const resp201Created = (res, data, message = "Created resource") => defaultResp(res, 201, "SUCCESS", [], message, data);

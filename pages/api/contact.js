@@ -1,11 +1,14 @@
-import { escapeHtml, resp200OK, resp400InvalidInput, resp404NotFound, resp500ServerError } from "./_default"
+import { escapeHtml, grabEnvSecret, resp200OK, resp400InvalidInput, resp404NotFound, resp500ServerError } from "./_default"
 import nodemailer from 'nodemailer';
 import * as yup from 'yup';
 import validator from 'validator';
 import { verifyHCaptcha } from "./_hcaptcha";
 const AWS = require("@aws-sdk/client-ses");
 
-const { APP_AWS_REGION, SMTP_AWS_KEY, SMTP_AWS_SECRET, HCAPTCHA_SECRET } = process.env;
+const APP_AWS_REGION = grabEnvSecret("APP_AWS_REGION");
+const SMTP_AWS_KEY = grabEnvSecret("SMTP_AWS_KEY");
+const SMTP_AWS_SECRET = grabEnvSecret("SMTP_AWS_SECRET");
+const HCAPTCHA_SECRET = grabEnvSecret("HCAPTCHA_SECRET");
 
 // Create SES service object.
 const ses = new AWS.SES({
