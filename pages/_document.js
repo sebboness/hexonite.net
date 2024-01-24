@@ -19,7 +19,7 @@ export default function Document() {
         <meta name="msapplication-TileImage" content="" />
         <meta name="theme-color" content="#00a7ff" />
 
-        <meta name="description" content="modern trending nextjs portfolio" />
+        <meta name="description" content="By Sebastian Stefaniuk - Software engineer with a good eye for design, attention to detail, and a SOLID understanding of how good code runs your business" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="robots" content="noindex, follow" />
