@@ -1694,7 +1694,7 @@ body.modal {
 /* ---------------- */
 /* Flash messages
 /* ---------------- */
-.flash div { color: #333 !important; padding: 20px; margin-bottom: 20px }
+.flash div { color: #333 !important; padding: 20px; }
 .flash h4 { color: #333 !important; margin-bottom: 0.5em; }
 .flash p, ul { margin: 0; }
 .flash ul { margin-left: 24px; }
@@ -1705,7 +1705,7 @@ body.modal {
     .flash .confirm h2 { color: #516f26; }
     
     /* Errors */
-    .flash .failure { background: #ffc; border: 8px solid #ea3c20; }
+    .flash .failure { background: #ffc; border: 8px solid #ea3c20; border-radius: 32px; }
     .flash .failure h2 { color: #f00;  }
     
     /* Notices */
