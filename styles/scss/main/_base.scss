@@ -647,7 +647,17 @@ h6 {
 .social li {
   margin: 0px 15px 0px 0px;
   display: inline-flex;
-  font-size: 24px;
+  font-size: 55px;
+  vertical-align: middle;
+}
+.social li img {
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+.social li.seb-icon img {
+  background: #ddd;
+  border-radius: 4px;
 }
 .social li:last-child {
   margin-right: 0px;
@@ -744,6 +754,8 @@ h6 {
   @media only screen and (max-width: 670px) {
     float: none;
     clear: both;
+    padding-right: 0px;
+    margin-bottom: 8px;
   }
 }
 .about .top_author_image img {

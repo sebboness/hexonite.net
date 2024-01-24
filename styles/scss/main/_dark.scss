@@ -146,6 +146,11 @@
   filter: invert(0) !important;
 }
 
+.dark .social li.seb-icon img {
+  background: #eee;
+  filter: invert(1);
+}
+
 .dark .cursor-inner {
   margin-left: -3px;
   margin-top: -3px;

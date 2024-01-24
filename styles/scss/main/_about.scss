@@ -257,10 +257,18 @@
     clear: both;
     display: flex;
     position: relative;
+    @media only screen and (max-width: 670px) {
+        display: block;
+    }
 }
 .resume_list ul li .time {
     width: 25%;
     padding-right: 20px;
+    @media only screen and (max-width: 670px) {
+        width: auto;
+        padding-right: 0px;
+        margin-bottom: 8px;
+    }
 }
 .resume_list ul li .time span {
     color: #fff;
@@ -275,11 +283,10 @@
 .resume_list ul li .place {
     width: 75%;
     padding-left: 20px;
-}
-.resume_list ul li .place h4 {
-    // font-size: 20px;
-    // margin-bottom: 2px;
-    // font-weight: 600;
+    @media only screen and (max-width: 670px) {
+        width: auto;
+        padding-left: 0px;
+    }
 }
 .resume_list ul li .place img {
     margin-bottom: 4px;

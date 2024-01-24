@@ -12,6 +12,12 @@ const SocialShare = [
   // },
   // { iconName: "dribbble", link: "https://dribbble.com/" },
   {
+    alt: "Sebastian Stefaniuk",
+    img: "/img/seb-headshot-closeup-256.svg",
+    link: "/sebastian",
+    liClass: "seb-icon",
+  },
+  {
     iconName: "fa-brands fa-linkedin",
     link: "https://www.linkedin.com/in/sebboness/",
   },
@@ -21,14 +27,17 @@ const Social = () => {
     <>
       <ul className="social">
         {SocialShare.map((val, i) => (
-          <li key={i}>
+          <li className={val.liClass} key={i}>
             <a href={`${val.link}`} rel="noreferrer">
-              {/* <img
-                className="svg"
-                src={`/img/svg/social/${val.iconName}.svg`}
-                alt="social"
-              ></img> */}
-              <i className={val.iconName}></i>
+              {val.img
+                ? <img
+                    src={val.img}
+                    alt={val.alt}
+                    width={48}
+                    height={48}
+                  ></img>
+                : <i className={val.iconName}></i>}
+              
             </a>
           </li>
         ))}
