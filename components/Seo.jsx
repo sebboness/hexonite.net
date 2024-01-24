@@ -4,7 +4,7 @@ const Seo = ({ pageTitle }) => {
   return (
     <Head>
       <title>
-        {(pageTitle ? `${pageTitle} || Hexonite` : "Hexonite") + " - Softare Services"}
+        {(pageTitle ? `${pageTitle} || Hexonite` : "Hexonite - by Sebastian Stefaniuk")}
       </title>
     </Head>
   );
