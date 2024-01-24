@@ -15,11 +15,25 @@ export default function Document() {
         <link rel="icon" type="image/png" sizes="32x32" href="/img/logo/favicon-32.png" />
         <link rel="icon" type="image/png" sizes="96x96" href="/img/logo/favicon-96.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/img/logo/favicon-192.png" />
+
         <meta name="msapplication-TileColor" content="#00a7ff" /> 
         <meta name="msapplication-TileImage" content="" />
         <meta name="theme-color" content="#00a7ff" />
 
         <meta name="description" content="By Sebastian Stefaniuk - Software engineer with a good eye for design, attention to detail, and a SOLID understanding of how good code runs your business" />
+       
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.hexonite.net/" />
+        <meta property="og:title" content="Hexonite.net - by Sebastian Stefaniuk" />
+        <meta property="og:description" content="Software engineer with a good eye for design, attention to detail, and a SOLID understanding of how good code runs your business" />
+        <meta property="og:image" content="https://www.hexonite.net/img/landing-image.jpg" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.hexonite.net/" />
+        <meta property="twitter:title" content="Hexonite.net - by Sebastian Stefaniuk" />
+        <meta property="twitter:description" content="Software engineer with a good eye for design, attention to detail, and a SOLID understanding of how good code runs your business" />
+        <meta property="twitter:image" content="https://www.hexonite.net/img/landing-image.jpg" />
+        
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="robots" content="noindex, follow" />
