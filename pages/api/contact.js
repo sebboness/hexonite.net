@@ -41,9 +41,12 @@ export default async function handler(req, res) {
     const hcaptcha_token = req.body["h-captcha-response"];
     try {
         const hcaptcha = await verifyHCaptcha(hcaptcha_token)
-        if (!hcaptcha.success)
+        if (!hcaptcha.success) {
+            console.warn("HCaptcha verification was not successful", hcaptcha)
             throw (hcaptcha.errors || ["Unsuccessful HCaptcha challenge"]).join("; ")
+        }
     } catch (err) {
+        console.warn("HCaptcha verification failed:", err)
         resp400InvalidInput(res, [err], "Failed to validate you're not a robot =[");
         return
     }
@@ -56,6 +59,8 @@ export default async function handler(req, res) {
         message.message = validator.trim(escapeHtml(message.message.replace(/\r\n/, "<br />")));
         message = await messageSchema.validate(message);
     } catch (err) {
+        console.warn("Failed to validate contact request body:", err, message)
+
         let errors = ["invalid input"];
         if (err.errors)
             errors = err.errors;
@@ -74,9 +79,10 @@ export default async function handler(req, res) {
             html: `<p>${message.name}<br />${message.email}</p><p>${message.message}</p>`,
           });
         
-        // console.log("Message sent: %s", info.messageId);
+        console.log("Contact message sent: %s", info.messageId);
         resp200OK(res, "Message has been successfully sent!")
     } catch (err) {
+        console.warn("Failed to send contact email:", err)
         resp500ServerError(res, [err.err || err], "Failed to send email")
     }
     
