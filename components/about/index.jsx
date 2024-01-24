@@ -21,8 +21,10 @@ const AboutMain = () => {
         <div className="about">
           <div className="title">
             <div className="title_flex">
-              <span>About</span>
-              <h3>Sebastian Stefaniuk</h3>
+              <div className="left">
+                <span>About</span>
+                <h3>Sebastian Stefaniuk</h3>
+              </div>
             </div>
           </div>
 
