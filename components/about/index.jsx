@@ -56,10 +56,10 @@ const AboutMain = () => {
           </div>
 
           <ul className="languages">
-            <li>Ich spreche Deutsch.</li>
-            <li>Mówie po polsku.</li>
+            <li title="I speak German">Ich spreche Deutsch.</li>
+            <li title="I speak Polish">Mówie po polsku.</li>
             <li>I speak English.</li>
-            <li>دارم فارسی یاد می گیرم</li>
+            <li title="I am learning Persian">دارم فارسی یاد می گیرم</li>
           </ul>
         </div>
       </div>
