@@ -1,0 +1,344 @@
+.services {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 100px 0px 100px 0px;
+}
+.services .list {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+.services .list .title {
+    padding: 0;
+}
+.services .list ul {
+    margin: 0px 0px 0px -40px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.services .list ul li {
+    margin: 0px 0px 40px 0px;
+    width: 50%;
+    padding-left: 40px;
+}
+.services .list ul li .list_inner {
+    width: 100%;
+    height: 100%;
+    clear: both;
+    cursor: pointer;
+    float: left;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px 20px 20px 20px;
+    transition: all 0.3s ease;
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        padding: 30px 30px 30px 30px;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 40px 40px 40px 40px;
+    }
+}
+
+    /* backgrounds */
+    .services .list ul li .list_inner.consulting {
+        background: url('/img/svc-consulting.jpg') repeat-x top left;
+    }
+    
+    .services .list ul li .list_inner.engineering {
+        background: url('/img/svc-engineering.jpg') repeat-x top left;
+    }
+    
+    .services .list ul li .list_inner.architecture {
+        background: url('/img/svc-architecture.jpg') repeat-x top left;
+    }
+    
+    .services .list ul li .list_inner.digital {
+        background: url('/img/svc-digital.jpg') repeat-x top left;
+    }
+
+.services .list ul li .list_inner:hover {
+    border: 1px solid #00a7ff;
+}
+.services .list ul li .number {
+    display: inline-block;
+    font-size: 24px;
+    margin-bottom: 140px;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 100%;
+    background-color: #00a7ff;
+    font-weight: 700;
+    color: #fff;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.services .list ul li .list_inner:hover .number {
+    background-color: #86a7ff;
+}
+.services .list ul li .title {
+    font-weight: 700;
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.services .list ul li .read_more {
+    margin-top: 7px;
+}
+.services .list ul li .list_inner:hover .read_more .read-more span {
+    transform: translateX(0%);
+}
+.services .popup_service_image {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    z-index: -111;
+}
+.services .service_hidden_details {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    z-index: -111;
+}
+.modalbox .service_popup_informations {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+.modalbox .service_popup_informations .image {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-bottom: 37px;
+}
+.modalbox .service_popup_informations .image img {
+    position: relative;
+    min-width: 100%;
+    opacity: 0;
+}
+.modalbox .service_popup_informations .image .main {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.modalbox .service_popup_informations .main_title {
+    width: 100%;
+    float: left;
+    margin-bottom: 23px;
+}
+.modalbox .service_popup_informations .main_title h3 {
+    font-size: 23px;
+    font-weight: 600;
+}
+.modalbox .service_popup_informations .descriptions {
+    width: 100%;
+    float: left;
+}
+.modalbox .service_popup_informations .descriptions p {
+    margin-bottom: 15px;
+}
+.modalbox .service_popup_informations .descriptions p:last-child {
+    margin-bottom: 0px;
+}
+.partners {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    background-color: #fff;
+    padding: 100px 0px;
+}
+.partners .partners_inner {
+    width: 100%;
+    float: left;
+    clear: both;
+    overflow: hidden;
+    border: 2px solid #eee;
+}
+.partners ul {
+    margin: -2px -10px -2px -2px;
+    list-style-type: none;
+    padding-top: 2px;
+    float: left;
+    padding-left: 2px;
+    min-width: calc(100% + 12px);
+}
+.partners ul li {
+    margin: 0px;
+    float: left;
+    width: 25%;
+    border: 2px solid #eee;
+    text-align: center;
+    height: 145px;
+    line-height: 145px;
+    position: relative;
+    margin-top: -2px;
+    margin-left: -2px;
+    overflow: hidden;
+}
+.partners ul li img {
+    max-width: 55%;
+    max-height: 100px;
+}
+.partners ul li .list_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    opacity: 0.5;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.partners ul li .list_inner:hover {
+    opacity: 1;
+}
+.pricing {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 100px 0px 60px 0px;
+    background-color: #fff;
+}
+.pricing .button a {
+    padding: 8px 40px 8px 40px;
+}
+.pricing .list {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+.pricing .list > ul {
+    margin: 0px 0px 0px -40px;
+    list-style-type: none;
+}
+.pricing .list > ul > li {
+    margin: 0px 0px 40px 0px;
+    padding-left: 40px;
+    width: 33.3333%;
+    float: left;
+}
+.pricing .list > ul > li .list_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 27px 40px 45px;
+}
+.pricing .price {
+    width: 100%;
+    float: left;
+}
+.pricing .price h3 {
+    font-size: 40px;
+    font-weight: 600;
+}
+.pricing .price span {
+    position: relative;
+    display: inline-block;
+}
+.pricing .price .currency {
+    position: absolute !important;
+    bottom: 10px;
+    right: -10px;
+    font-size: 15px;
+}
+.pricing .plan {
+    width: 100%;
+    float: left;
+}
+.pricing .plan h3 {
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.pricing .item {
+    margin: 0px;
+    list-style-type: none;
+}
+.pricing .item li {
+    margin: 0px;
+    opacity: 0.5;
+}
+.pricing .item li.active {
+    opacity: 1;
+}
+.pricing .button {
+    margin-top: 30px;
+}
+.pricing .popular {
+    position: absolute;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-size: 13px;
+    padding: 0 20px 3px;
+    top: -17px;
+    right: 10px;
+}
+.facts {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 100px 0px 60px 0px;
+}
+.facts .list {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+.facts .list ul {
+    margin: 0px 0px 0px -40px;
+    list-style-type: none;
+}
+.facts .list ul li {
+    margin: 0px 0px 40px 0px;
+    padding-left: 40px;
+    width: 33.333%;
+    float: left;
+}
+.facts .list ul li .list_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 40px 20px;
+}
+.facts .list h3 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 3px;
+}

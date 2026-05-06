@@ -1,9 +1,12 @@
 import Home from "@/components/home/Home";
+import Seo from "@/components/Seo";
 import Sidebar from "@/components/sidebar/Sidebar";
 
 export default function HomePage() {
     return (
         <>
+            <Seo pageTitle="" />
+
             <Sidebar />
 
             <div className="rightpart">

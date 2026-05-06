@@ -4,14 +4,14 @@ import nodemailer from 'nodemailer';
 import * as yup from 'yup';
 import validator from 'validator';
 import { verifyHCaptcha } from "@/lib/hcaptcha";
-import { SES, SendEmailCommand } from "@aws-sdk/client-ses";
+import { SESv2Client, SendEmailCommand } from "@aws-sdk/client-sesv2";
 
 const APP_AWS_REGION = grabEnvSecret("APP_AWS_REGION");
 const SMTP_AWS_KEY = grabEnvSecret("SMTP_AWS_KEY");
 const SMTP_AWS_SECRET = grabEnvSecret("SMTP_AWS_SECRET");
 
 // Create SES service object.
-const sesClient = new SES({
+const sesClient = new SESv2Client({
     apiVersion: "2010-12-01",
     region: APP_AWS_REGION,
     credentials: {

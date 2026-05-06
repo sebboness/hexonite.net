@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter_Tight } from "next/font/google";
 import Script from "next/script";
-import "./globals.css";
+import "@/styles/scss/style.scss";
+import "aos/dist/aos.css";
 import Providers from "./providers";
 
 const interTight = Inter_Tight({
