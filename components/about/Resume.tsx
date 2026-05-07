@@ -8,6 +8,23 @@ const Resume = () => {
       title: "",
       resume: [
         {
+          id: 0,
+          year: "2024 - Present",
+          institute: "Triumph",
+          website: "https://www.triumph.io/",
+          websiteIcon: "/img/logo/triumph-32.png",
+          degree: "Lead Software Engineer",
+          desc: <>
+            <p>
+              At Triumph, I lead backend engineering for a distributed payments and invoice factoring platform serving
+              the transportation industry. From designing critical payment systems to spearheading a cross-team Okta IDP 
+              consolidation, my work lives at the intersection of complex architecture and high-stakes reliability. I 
+              leverage agentic development with Claude Code to sharpen delivery pace, building production-grade services 
+              that keep money moving.
+            </p>
+          </>,
+        },
+        {
           id: 1,
           year: "2023 - 2024",
           institute: "Tilia",
