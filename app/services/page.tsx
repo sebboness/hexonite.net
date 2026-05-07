@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Service from "@/components/service";
 import Sidebar from "@/components/sidebar/Sidebar";
 
-export const metadata: Metadata = { title: "Service" };
+export const metadata: Metadata = { title: "Services" };
 
 export default function ServicesPage() {
     return (
