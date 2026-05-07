@@ -21,13 +21,12 @@ const sidebarData: SidebarItem[] = [
     menuName: "Services",
     routePath: "/services",
   },
-  // TODO add the blog page
-  // {
-  //   id: 3,
-  //   icon: "/img/svg/paper.svg",
-  //   menuName: "Blog",
-  //   routePath: "/blog",
-  // },
+  {
+    id: 3,
+    iconImage: "/img/svg/paper.svg",
+    menuName: "Blog",
+    routePath: "/blog",
+  },
   {
     id: 4,
     iconImage: "/img/logo/favicon-256.svg",
