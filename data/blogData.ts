@@ -1,3 +1,5 @@
+import { KO_FI_LINK } from "./constants";
+
 export type BlogArticle = {
     id: string;
     title: string;
@@ -14,7 +16,8 @@ export type BlogArticle = {
 const blogData: BlogArticle[] = [
     {
         id: "lyricsray",
-        title: "From Dad Instinct to Deployed App: Why I Built LyricsRay",
+        title: "From dad instinct to deployed app: Why I built LyricsRay",
+        heroImage: "/img/blog/lyricsray-hero.jpg",
         label: "Blog",
         description: "How a middle schooler's favorite pop song sparked LyricsRay — a free, AI-powered tool that helps parents make informed decisions about the music their kids are listening to.",
         date: "May 7, 2026",
@@ -32,7 +35,7 @@ const blogData: BlogArticle[] = [
 
 <p>What I'm most proud of isn't the tech but the intention behind it. LyricsRay doesn't try to be the parent. It doesn't tell you what to allow or ban. It gives you the information and steps aside, because you know your child best. Every family has different values, different thresholds, and different conversations they're ready to have. LyricsRay just makes sure you're having them with the full picture in front of you.</p>
 
-<p>LyricsRay is live at <a href="https://www.lyricsray.com" target="_blank" rel="noreferrer">lyricsray.com</a> and completely free to use. If it helps you make even one better call for your kid, that's the whole point. Hosting it is not free, but my plan is to continue improving it with smarter analysis, broader coverage, and more ways to help parents stay one step ahead of the playlist. I did add a link to my Ko-fi page. Coffee is good.</p>
+<p>LyricsRay is live at <a href="https://www.lyricsray.com" target="_blank">lyricsray.com</a> and completely free to use. If it helps you make even one better call for your kid, that's the whole point. Hosting it is not free, but my plan is to continue improving it with smarter analysis, broader coverage, and more ways to help parents stay one step ahead of the playlist. I did add a link to my <a href="${KO_FI_LINK}" target="_blank">Ko-fi</a> page. Coffee is good.</p>
         `.trim(),
     },
 ];

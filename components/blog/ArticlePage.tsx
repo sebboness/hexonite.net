@@ -12,6 +12,7 @@ const ArticlePage = ({ id }: ArticlePageProps) => {
     return (
         <>
             <ArticleHero
+                author={article.author}
                 label={article.label}
                 title={article.title}
                 date={article.date}

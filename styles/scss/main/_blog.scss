@@ -6,7 +6,7 @@
 
 .article-hero {
     width: 100%;
-    min-height: 110vh;
+    min-height: 102vh;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -51,26 +51,37 @@
 }
 
 .article-hero__label {
+    color: #fff;
     display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 2px solid #00a7ff;
     letter-spacing: 3px;
-    color: #00a7ff;
     margin-bottom: 18px;
 }
 
 .article-hero__title {
-    font-size: 52px;
-    font-weight: 700;
     color: #fff;
-    line-height: 1.15;
+    font-weight: 800;
     margin-bottom: 24px;
     @media only screen and (max-width: 900px) {
         font-size: 40px;
     }
     @media only screen and (max-width: 670px) {
         font-size: 28px;
+    }
+}
+
+.article-hero__author {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    @media only screen and (max-width: 900px) {
+        font-size: 20px;
+    }
+    @media only screen and (max-width: 670px) {
+        font-size: 16px;
     }
 }
 
