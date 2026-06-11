@@ -107,12 +107,16 @@ const AboutMain = () => {
         <div className="container">
           <div className="in">
             <div className="page_text">
-              <h3>Interests</h3>
-              <span>Things I love to do outside of tech</span>
+              <h3>Projects</h3>
+              <span>Side projects I build because they matter to people I care about</span>
 
               <p>
-                Besides my career, I do like to challenge myself and learn new things whenever time allows it. Here are a
-                few things that caught my interest in recent years:
+                Outside of my day job, I like to challenge myself and learn new things whenever time allows it. Lately
+                that&apos;s meant getting into 3D printing and modeling, practicing mindfulness through meditation and
+                cooking, and indulging my long-time love of electronica music and the JDM car scene. But the projects
+                I&apos;m proudest of are the ones where my skills as an engineer meet a real need for people I care
+                about, whether that&apos;s my family, my community, or a parent somewhere trying to make better choices
+                for their kid.
               </p>
             </div>
           </div>
@@ -123,67 +127,63 @@ const AboutMain = () => {
         <div className="container">
           <div className="in">
             <div className="page_text">
-              <h3>3D printing</h3>
+              <h3>LyricsRay</h3>
+              <span>An AI tool born from a dad&apos;s gut check</span>
               <p>
-                This is a rather new hobby of mine, and it has brought out a new creative side of me. In my late teens and
-                early 20s I really liked 3D modeling, and one of the things I always wanted was to hold a piece of my designs
-                in my hands. With the advent of 3D printing at home, this has finally become a reality. I&apos;m spending a
-                lot of time 3D modeling and printing, and it&apos;s fun!
+                It started with a simple question from my teenage stepdaughter about the lyrics to a popular pop
+                song. When I actually read them, I realized how much questionable content can hide in plain sight in the
+                music kids listen to every day, and how hard it is for parents to keep up. So I
+                built <a href="https://www.lyricsray.com" target="_blank" rel="noreferrer">LyricsRay</a>, a free,
+                AI-powered tool that analyzes a song&apos;s lyrics for explicit language, violence, substance use, sexual
+                content, and more, and explains what it found in plain language. It doesn&apos;t tell anyone what to ban, 
+                it just gives parents the information to decide what&apos;s right for their family.
+              </p>
+              <p>
+                LyricsRay is a full-stack project built with Next.js, TypeScript, Claude for the lyrical analysis, and
+                AWS/Terraform for the infrastructure. You can read the full story behind it on
+                <Link href="/blog/lyricsray">my blog</Link>.
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="subsection withbg _3dprinting">
+      <div className="subsection withbg lyricsray">
       </div>
 
       <div className="subsection interest">
         <div className="container">
           <div className="in">
             <div className="page_text">
-              <h3>Mindfulness</h3>
-              <span>Practicing meditation and simple activities with mindfulness</span>
+              <h3>Built for free, kept free</h3>
               <p>
-                Let me emphasize the significance of how much meditation has helped me in calming down that inner
-                chatterbox. Having made it a daily practice, the calmness has brought with it increased focus as well as
-                an open awareness of the things around and within me.
-              </p>
-              <p>
-                Meditation is not for everyone. However, you may practice other activities, but with a mindful attitude.
-                For example: I love cooking. Experimenting with new flavors or cooking my favorite dishes is such a
-                satisfying activity. When I cook, I&apos;m being mindful and use all of my attention for just that.
+                LyricsRay is intended to be free to use. For now I cover hosting costs, but accept support
+                through <a href="https://ko-fi.com/sebboness" target="_blank" rel="noreferrer">Ko-fi</a>, where supporters
+                can donate a small amount as a thank-you. But honestly, the real reward isn&apos;t the
+                donations. It&apos;s hearing from a parent that the tool helped them have a better conversation with
+                their kid, and that&apos;s the kind of impact that keeps me building.
               </p>
             </div>
           </div>
         </div>
-      </div>
-      <div className="subsection withbg cooking">
       </div>
 
       <div className="subsection interest">
         <div className="container">
           <div className="in">
             <div className="page_text">
-              <h3>Electronica & JDM</h3>
-              <span>Absolute joys: driving and music</span>
+              <h3>Volunteering for my temple community</h3>
+              <span>An admin portal for the S.R.F. Temple&apos;s Sunday School</span>
               <p>
-                One of the purest joys since I can remember has been music. It fascinates me how much music can
-                influence our emotions and mood. My favorite genre is electronica, which in itself has many, many
-                subgenres. I love the sound of synthesizers - those spacey, lofty, otherwordly sounds - and I have been
-                dabbling occasionally with keyboards, hoping to some day be able to create my own electronica composures.
-              </p>
-              <p>
-                For me, driving has perpetually symbolized the essence of freedom: That feeling of being able to go anywhere, anytime.
-                Cars have always interested me, and although I am not much mechanically talented, I love the tuning
-                scene, in particular that of
-                the <a href="https://duckduckgo.com/?q=JDM+community&atb=v362-1&iax=images&ia=images">JDM community</a>:
-                The sound of a Japanese twin-turbo inline-6 engine has to be among the things I enjoy the most.
+                Most recently, I&apos;ve been volunteering my time to build an administrative portal for the
+                Self-Realization Fellowship Temple I attend. It handles student registration, class scheduling,
+                attendance, and teacher onboarding for our Sunday School program. It&apos;s designed from the ground up
+                to generalize to other SRF Schools and Temples, not just ours, and it&apos;s another full-stack effort
+                (Next.js, TypeScript, AWS Lambda, Cognito, DynamoDB, Terraform), giving me a meaningful way to put the
+                skills I use every day at work toward a community that means a lot to me.
               </p>
             </div>
           </div>
         </div>
-      </div>
-      <div className="subsection withbg others">
       </div>
     </>
   );
