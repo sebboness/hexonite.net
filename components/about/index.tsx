@@ -140,8 +140,7 @@ const AboutMain = () => {
               </p>
               <p>
                 LyricsRay is a full-stack project built with Next.js, TypeScript, Claude for the lyrical analysis, and
-                AWS/Terraform for the infrastructure. You can read the full story behind it on
-                <Link href="/blog/lyricsray">my blog</Link>.
+                AWS/Terraform for the infrastructure. You can read the full story behind it on <Link href="/blog/lyricsray">my blog</Link>.
               </p>
             </div>
           </div>
