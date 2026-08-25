@@ -105,6 +105,18 @@
 .dark .all_wrap .leftpart .menu > ul li:hover {
   color: #fff;
 }
+.dark .all_wrap .leftpart .menu .submenu {
+  border-left-color: rgba(0, 167, 255, 0.3);
+}
+.dark .all_wrap .leftpart .menu .submenu li a {
+  color: #888;
+  &.active {
+    color: #00a7ff;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
 .dark .all_wrap .leftpart .copyright p {
   color: #bbb;
 }
