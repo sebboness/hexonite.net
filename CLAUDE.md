@@ -124,3 +124,5 @@ npm run type-check  # tsc --noEmit
 ```
  
 Requires environment secrets to be set for the contact form to work (see above).
+
+**Never start the dev server (`npm run dev`) yourself, including via the Browser/preview tools.** The user runs it themselves and a second instance on the same port will conflict. Running `npm run build`, `npm run test`, `npm run lint`, and `npm run type-check` is fine.

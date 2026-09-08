@@ -1,8 +1,6 @@
 'use client'
 
 import { useEffect, useRef, useState } from "react";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { useTheme } from "next-themes";
 import FlashMessage from "../FlashMessage";
@@ -19,32 +17,14 @@ const Contact = () => {
   const { theme } = useTheme();
 
   useEffect(() => {
+    // Guards against SSR/client hydration mismatch; setMounted must run once the component mounts.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, [token]);
 
   const onLoad = () => {
     captchaRef.current?.execute();
   };
-
-  const showErrorMessage = (error: string) => toast.error(error, {
-    position: "top-right",
-    autoClose: 2000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-  });
-
-  const showSuccessMessage = () => toast.success("Message Sent Successfully!", {
-    position: "top-right",
-    autoClose: 2000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-  });
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

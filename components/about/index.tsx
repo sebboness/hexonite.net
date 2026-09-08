@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Resume from "./Resume";
 import Link from "next/link";
 
@@ -28,8 +29,15 @@ const AboutMain = () => {
           </div>
 
           <div className="top_author_image">
-            <img src="/img/seb-headshot-512.svg" alt="Sebastian Stefaniuk" />
-            <img className={`overlay${picClicked ? " clicked" : ""}`} src="/img/seb-512.jpg" alt="Sebastian Stefaniuk" onClick={onPicClick} />
+            <Image src="/img/seb-headshot-512.svg" alt="Sebastian Stefaniuk" width={512} height={475} />
+            <Image
+              className={`overlay${picClicked ? " clicked" : ""}`}
+              src="/img/seb-512.jpg"
+              alt="Sebastian Stefaniuk"
+              width={512}
+              height={475}
+              onClick={onPicClick}
+            />
           </div>
 
           <h3>Software engineer</h3>

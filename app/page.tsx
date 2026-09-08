@@ -1,4 +1,5 @@
 import Home from "@/components/home/Home";
+import LatestPosts from "@/components/blog/LatestPosts";
 import Seo from "@/components/Seo";
 import Sidebar from "@/components/sidebar/Sidebar";
 
@@ -14,6 +15,12 @@ export default function HomePage() {
                     <div className="section">
                         <div data-aos="fade-right" data-aos-duration="1200">
                             <Home />
+                        </div>
+                    </div>
+
+                    <div className="section">
+                        <div data-aos="fade-right" data-aos-duration="1200">
+                            <LatestPosts />
                         </div>
                     </div>
                 </div>

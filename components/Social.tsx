@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const SocialShare = [
@@ -30,12 +31,12 @@ const Social = () => {
           <li className={val.liClass} key={i}>
             <a href={`${val.link}`} rel="noreferrer">
               {val.img
-                ? <img
+                ? <Image
                     src={val.img}
-                    alt={val.alt}
+                    alt={val.alt ?? ""}
                     width={48}
                     height={48}
-                  ></img>
+                  />
                 : <i className={val.iconName}></i>}
               
             </a>

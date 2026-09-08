@@ -166,6 +166,31 @@
     }
 }
 
+/* --- Latest posts (home page) --- */
+
+.title .title_flex .right a {
+    color: #00a7ff;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.title .title_flex .right a:hover {
+    color: #86a7ff;
+}
+
+/* --- Landing page wrapper (matches .about / .services header spacing) --- */
+
+.blog {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 100px 0px 100px 0px;
+}
+
 /* --- List --- */
 
 .blog-list {
