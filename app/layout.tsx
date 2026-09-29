@@ -45,8 +45,7 @@ export const metadata: Metadata = {
     other: {
         "msapplication-TileColor": "#00a7ff",
     },
-    robots: "noindex, follow",
-};
+    robots: { index: true, follow: true },};
 
 export const viewport: Viewport = {
     width: "device-width",
